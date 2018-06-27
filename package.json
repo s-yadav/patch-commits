@@ -1,0 +1,24 @@
+{
+  "name": "patch-commits",
+  "version": "0.1.0",
+  "description": "Patch all commits on a branch with given command",
+  "main": "index.js",
+  "author": "Sudhanshu Yadav",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-yadav/patch-commits"
+  },
+  "bugs": {
+    "mail": "sudhanshuyadav2@gmail.com",
+    "url": "https://github.com/s-yadav/patch-commits/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "shelljs": "^0.8.2",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "yarn": "^1.7.0"
+  }
+}
