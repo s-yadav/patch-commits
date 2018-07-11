@@ -1,7 +1,7 @@
 {
   "name": "patch-commits",
-  "version": "0.1.1",
-  "description": "Patch all commits on a branch with given command",
+  "version": "0.1.2",
+  "description": "Patch all commits on a branch with given script",
   "main": "index.js",
   "bin": "index.js",
   "author": "Sudhanshu Yadav",
