@@ -3,6 +3,9 @@ Patch all commits to have desired changes in a branch
 
 This script allows you to go to each commits on a branch and run a script on each commits to have desired changes.
 
+## Warning
+Later discovered about git filter-branch and you can do what this module does with [git filter branch](https://git-scm.com/docs/git-filter-branch). Even though you have to write more bash script to get the committed files and filter them with git filter branch, I would suggest you to use git commands to do git changes.
+
 ## Installation
 ```sh
 npm install -g patch-commits
