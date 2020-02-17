@@ -1,6 +1,6 @@
 {
   "name": "patch-commits",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Patch all commits on a branch with given script",
   "main": "index.js",
   "bin": "index.js",

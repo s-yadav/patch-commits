@@ -37,17 +37,17 @@ exec(`git reset --hard ${parentCommit}`);
 
 exec(`git checkout -b ${workerBranch}`);
 
+//get all the committed files
+const committedFiles = exec(`git diff-tree --no-commit-id --name-only -r ${parentCommit}..${currentBranch}`).stdout;
+
+const committedFilesArray = committedFiles.split('\n').filter(file => !!file);
+
 //patch each commits to have desired changes
 commits.forEach((commitHash, idx) => {
   console.log(green(`Patching commit ${commitHash}. ${commits.length - idx - 1} commits left.`));
 
   exec(`git checkout ${workerBranch}`);
   exec(`git reset --hard ${commitHash}`);
-
-  //get all the committed files
-  const committedFiles = exec(`git diff-tree --no-commit-id --name-only -r ${commitHash}`).stdout;
-
-  const committedFilesArray = committedFiles.split('\n').filter(file => !!file);
 
   //evaluate expressions inside command
   const commandToRun = command.replace(/\{{(.*?)}}/g, ($0, $1) => {
